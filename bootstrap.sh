@@ -15,12 +15,13 @@ debconf-set-selections <<< "mysql-server mysql-server/root_password_again passwo
 
 apt-get install -y mysql-server-5.5
 cp /home/vagrant/menus/confs/my.conf /etc/mysql/my.conf
-/etc/init.d/mysql restart
+service mysql restart
+# /etc/init.d/mysql restart
 
 # Install python packages
 apt-get install -y python3.5
 apt-get install -y libmysqlclient-dev
-apt-get install -y python3-dev
+apt-get install -y python3.5-dev
 
 
 # Install pip

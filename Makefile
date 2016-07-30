@@ -18,7 +18,7 @@ setup-local: venv
 	${PIP} install -r requirements.txt
 	${PIP} install -r requirements_dev.txt
 
-run: clean
+debug: clean
 	${PYTHON} manage.py runserver 0.0.0.0:5000
 
 create-db:
