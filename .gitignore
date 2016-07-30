@@ -74,4 +74,6 @@ target/
 # Rope Project
 .ropeproject/*
 
-id_rsa
+
+# Vagrant
+.vagrant
