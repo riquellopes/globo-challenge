@@ -1,6 +1,6 @@
 #### Backend/Frontend:
 
-* Vou usar python3.5.
+* Vou usar python3.5, não quero ser que preocupar com unicode.
 * Para gerenciar a criação de menu vou utilizar Django. A escolha dele é muito natural para mim,
 pois ele vai auxiliar e me preocupar apenas com meu sistema.
 
@@ -14,4 +14,3 @@ mais depois foi de boa.
 * Adicionei um py.test ao projeto. Eu utilize o nose por um bom tempo, principalmente pelo fato
 de conseguir descrever os tests no doc do método. Passei a utilizar o pytest, depois que fui dar
 manutenção em projeto da empresa. Eu fui vendo que ele possui um features, bem legais.
-* Apesar de não sei um requisito, alterei o idioma e time zone do django no settings.
