@@ -14,3 +14,10 @@ mais depois foi de boa.
 * Adicionei um py.test ao projeto. Eu utilize o nose por um bom tempo, principalmente pelo fato
 de conseguir descrever os tests no doc do método. Passei a utilizar o pytest, depois que fui dar
 manutenção em projeto da empresa. Eu fui vendo que ele possui um features, bem legais.
+
+* Hoje eu iniciei a interface do admin, criei os testes para validar a regra de negócio. Para evitar ter
+que fazer consultas, eu verifico qual o nível do parent que já existe antes que o no item seja criado.
+* Adicionei o FactoryBoy ao projeto, apesar do desafio ser pequeno eu achei interessante utilizá-lo,
+para evitar criar o mesmo objeto e ter que ficar refatorando testes.
+* Para debugar eu adicionei o ipdb.
+* Adicionei o pytest-mock ele é um wrapper do mock da unittest. Poderia usar o da unittest.
