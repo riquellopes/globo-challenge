@@ -2,6 +2,7 @@
 
 PYTHON=venv/bin/python
 PIP=venv/bin/pip
+PY_TEST=venv/bin/py.test
 
 clean:
 	find . \( -name *.py[co] -o -name __pycache__ \) -delete
@@ -23,3 +24,6 @@ debug: clean
 
 create-db:
 	mysql -uroot -e "CREATE DATABASE IF NOT EXISTS menus"
+
+test: clean
+	${PY_TEST} -s -r a	--color=yes
