@@ -1,11 +1,17 @@
 from django.contrib import admin
+
 from menu.models import Menu, Item
 from menu.forms import ItemForm
 
 
-class ItemAdmin(admin.ModelAdmin):
+class ItemAdmin(admin.TabularInline):
     form = ItemForm
+    model = Item
 
 
-admin.site.register(Menu)
-admin.site.register(Item, ItemAdmin)
+class MenuAdmin(admin.ModelAdmin):
+    inlines = [
+        ItemAdmin
+    ]
+
+admin.site.register(Menu, MenuAdmin)

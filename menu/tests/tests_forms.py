@@ -35,3 +35,11 @@ def test_is_valid_should_return_false_when_not_ok(mock, menu):
 
     assert item.is_valid() is False
     assert item.errors['parent'][0] == "Você chegou no limite de sub itens que o menu suporta."
+
+
+@pytest.mark.django_db
+def test_parent_does_not_load_yourself():
+    fac = ItemSonFactory()
+    item = ItemForm(instance=fac)
+
+    assert fac.id not in item.fields['parent'].queryset.all().values_list("id", flat=True)

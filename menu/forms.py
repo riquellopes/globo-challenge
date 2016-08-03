@@ -5,6 +5,12 @@ from .models import Item
 
 class ItemForm(ModelForm):
 
+    def __init__(self, *args, **kwargs):
+        super(ItemForm, self).__init__(*args, **kwargs)
+        if self.instance:
+            self.fields['parent'].queryset = self.fields['parent'].queryset.exclude(
+                id=self.instance.id)
+
     def clean(self):
         if self.cleaned_data['parent']:
             parent_level = self.cleaned_data['parent'].level
