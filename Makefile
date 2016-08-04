@@ -20,7 +20,7 @@ setup-local: venv
 	${PIP} install -r requirements_dev.txt
 
 debug: clean
-	${PYTHON} manage.py runserver 0.0.0.0:5000
+	${PYTHON} manage.py runserver 0.0.0.0:5000 --settings=menus.settings.base
 
 create-db:
 	mysql -uroot -e "CREATE DATABASE IF NOT EXISTS menus"

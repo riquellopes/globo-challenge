@@ -21,3 +21,6 @@ que fazer consultas, eu verifico qual o nível do parent que já existe antes qu
 para evitar criar o mesmo objeto e ter que ficar refatorando testes.
 * Para debugar eu adicionei o ipdb.
 * Adicionei o pytest-mock ele é um wrapper do mock da unittest. Poderia usar o da unittest.
+
+* Para deixar os testes mais rápido, criei um settings que executa os testes em mémoria, e outro para
+executar o projeto.
