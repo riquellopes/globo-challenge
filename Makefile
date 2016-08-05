@@ -22,6 +22,12 @@ setup-local: venv
 debug: clean
 	${PYTHON} manage.py runserver 0.0.0.0:5000 --settings=menus.settings.base
 
+makemigrations:
+	${PYTHON} manage.py makemigrations --settings=menus.settings.base
+
+migrate:
+	${PYTHON} manage.py  migrate --settings=menus.settings.base
+
 create-db:
 	mysql -uroot -e "CREATE DATABASE IF NOT EXISTS menus"
 

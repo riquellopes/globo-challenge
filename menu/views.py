@@ -1,3 +1,11 @@
-from django.shortcuts import render
+from rest_framework import generics
+from .serializers import MenuSerializer
+from .models import Menu
 
-# Create your views here.
+
+class MenuView(generics.RetrieveAPIView):
+    """
+        /menu/globo - Recupera menu Globo
+    """
+    queryset = Menu.objects.all()
+    serializer_class = MenuSerializer
