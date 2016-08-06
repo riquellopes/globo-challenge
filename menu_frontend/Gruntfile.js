@@ -3,7 +3,7 @@ module.exports = function(grunt){
         root: './static/',
         js: '<%=assets.root %>js/',
         test: './menu/tests/javascript/',
-    }
+    };
 
     require("load-grunt-tasks")(grunt);
 
