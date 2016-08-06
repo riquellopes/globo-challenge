@@ -17,6 +17,13 @@ apt-get install -y mysql-server-5.5
 cp /home/vagrant/menus/confs/my.conf /etc/mysql/my.conf
 service mysql restart
 
+# Install nodejs dependencies
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash
+apt-get install -y nodejs
+apt-get install -y npm
+npm install grunt grunt-cli -g
+npm install
+
 # Install python packages
 apt-get install -y python3.5
 apt-get install -y libmysqlclient-dev

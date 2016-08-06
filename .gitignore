@@ -77,3 +77,9 @@ target/
 
 # Vagrant
 .vagrant
+
+# NodeJs
+node_modules
+
+# Jasmine
+_SpecRunner.html
