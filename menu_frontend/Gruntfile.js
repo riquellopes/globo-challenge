@@ -1,8 +1,8 @@
 module.exports = function(grunt){
     var assets = {
-        root: './static/',
+        root: './assets/',
         js: '<%=assets.root %>js/',
-        test: './menu/tests/javascript/',
+        test: '.test/**/',
     };
 
     require("load-grunt-tasks")(grunt);
