@@ -24,3 +24,10 @@ para evitar criar o mesmo objeto e ter que ficar refatorando testes.
 
 * Para deixar os testes mais rápido, criei um settings que executa os testes em mémoria, e outro para
 executar o projeto.
+
+* Eu divide o projeto 2, o backend que é um api com um admin para realizar as alterações no menu,
+e o frontend que vai consumir via rest o recurso e tranformar em menu responsivo.
+* O backend ainda pretendo realizar um teste carga com [Locust](http://locust.io), para ter uma noção
+do tempo de resposta da api.
+* No frontend eu vou usar Grunt para gereciar minhas tarefas, jasmine para executar minhas specs, uglify
+para minificar meus arquivos js e jshint para analizar meus js.
