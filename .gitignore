@@ -86,3 +86,6 @@ _SpecRunner.html
 
 # Grunt
 .grunt
+
+# min
+*.min.js
