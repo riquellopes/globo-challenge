@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'corsheaders',
     'rest_framework',
     'menu'
 ]
@@ -45,6 +46,7 @@ INSTALLED_APPS = [
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -126,3 +128,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 LIMIT_ITENS = 2
+
+# Cors
+CORS_URLS_REGEX = r'^/app/menu/.*$'
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_METHODS = ("GET", )
