@@ -25,9 +25,18 @@ para evitar criar o mesmo objeto e ter que ficar refatorando testes.
 * Para deixar os testes mais rápido, criei um settings que executa os testes em mémoria, e outro para
 executar o projeto.
 
-* Eu divide o projeto 2, o backend que é um api com um admin para realizar as alterações no menu,
+* Eu divide o projeto 2, o backend que é uma api com um admin para realizar as alterações no menu,
 e o frontend que vai consumir via rest o recurso e tranformar em menu responsivo.
-* O backend ainda pretendo realizar um teste carga com [Locust](http://locust.io), para ter uma noção
-do tempo de resposta da api.
+* Gostaria de fazer um teste de carga no backend com [Locust](http://locust.io), para ter uma noção
+do tempo de resposta da api, e poder ter a real definição do número de request a api suporta.
 * No frontend eu vou usar Grunt para gereciar minhas tarefas, jasmine para executar minhas specs, uglify
 para minificar meus arquivos js e jshint para analizar meus js.
+
+* O javascript do menu foi feito todo com [vanillajs](http://vanilla-js.com), ele não tem nenhuma dependências
+de framework. Essa decisão foi tomada, pesando reutilização em outros projetos e reduzir o numero de dependências
+que a aplicação pode ter.
+* Quando inicie pensei utilizar o [Handlebars](http://handlebarsjs.com), mais o html gerado pelo menu é bem simples.
+* Eu também pensei em utlizar uma microframework para ajax, mais acabei desenvolvendo uma api para realizar a consulta
+ajax. Em uma nova versão eu iria pesquisaria mais, para encontrar um microframework simples.
+
+* Eu adicionei django-cors
