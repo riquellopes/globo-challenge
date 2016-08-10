@@ -17,12 +17,6 @@ apt-get install -y mysql-server-5.5
 cp /home/vagrant/menus/confs/my.conf /etc/mysql/my.conf
 service mysql restart
 
-# Install nodejs dependencies
-curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash
-apt-get install -y nodejs
-apt-get install -y npm
-npm install grunt grunt-cli -g
-npm install
 
 # Install python packages
 apt-get install -y python3.5
@@ -36,4 +30,26 @@ python3.5 /tmp/get-pip.py
 pip install virtualenv
 
 # Install requirements
-cd menus; make setup-local; make create-db
+cd app; make setup-local; make create-db
+
+# Install nodejs dependencies
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash
+apt-get install -y nodejs
+apt-get install -y npm
+cd menu_frontend; npm install
+# npm install grunt grunt-cli -g
+# npm install
+
+# Install nginx
+apt-get get-install -y ngnix
+
+# SettingUp MenuBackend
+cp /home/vagrant/app/confs/menus.conf /etc/nginx/sites-available/menus.conf
+ln -s /etc/nginx/sites-available/menus.conf /etc/nginx/sites-enabled/menus.conf
+chown -R www-data:www-data /home/vagrant/app/menu_backend/
+sudo chmod 755 /home/vagrant/app/menu_backend/ -R
+
+rm /etc/nginx/sites-available/default
+rm /etc/nginx/sites-available/default
+
+/etc/init.d/nginx reload
