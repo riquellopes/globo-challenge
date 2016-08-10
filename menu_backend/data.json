@@ -1,0 +1,54 @@
+[
+{
+  "model": "menu.menu",
+  "pk": 1,
+  "fields": {
+    "name": "Globo",
+    "slug": "globo"
+  }
+},
+{
+  "model": "menu.item",
+  "pk": 1,
+  "fields": {
+    "url": "http://globoesporte.globo.com/olimpiadas/saltos-ornamentais/noticia/2016/08/ingrid-vai-repetir-salto-do-zero-no-pan-agora-de-olho-em-final-da-olimpiada.html",
+    "label": "Moda",
+    "parent": null,
+    "level": 0,
+    "menu": 1
+  }
+},
+{
+  "model": "menu.item",
+  "pk": 2,
+  "fields": {
+    "url": "http://globoesporte.globo.com/olimpiadas/futebol/noticia/2016/08/neymar-e-mais-quatro-sao-poupados-em-treino-da-selecao-olimpica.html",
+    "label": "Culin\u00e1ria",
+    "parent": null,
+    "level": 0,
+    "menu": 1
+  }
+},
+{
+  "model": "menu.item",
+  "pk": 3,
+  "fields": {
+    "url": "http://gshow.globo.com/Bastidores/noticia/2016/08/ana-maria-braga-diz-conversar-com-deus-diariamente-sou-muito-amiga-dele-e-de-outras-entidades.html",
+    "label": "Ana Maria Braga",
+    "parent": 2,
+    "level": 1,
+    "menu": 1
+  }
+},
+{
+  "model": "menu.item",
+  "pk": 4,
+  "fields": {
+    "url": "http://globoesporte.globo.com/olimpiadas/noticia/2016/08/mercadinho-da-vila-olimpica-cobra-ate-o-triplo-do-preco-por-itens-essenciais.html",
+    "label": "Mercadinho",
+    "parent": 3,
+    "level": 2,
+    "menu": 1
+  }
+}
+]
