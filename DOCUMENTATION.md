@@ -44,7 +44,7 @@ A aplicação frontend é apenas um js, foi criando um index.html com um menu te
 #### Comandos do MenuFrontend.
 ```bash
     $ cd menu_frontend
-    $ grunt
+    $ grunt # O default executa os testes e valida o javacript.
     $ grunt jsbuilder
     $ grunt debug # Levanta um server na qual o menu está aplicado.
 ```
