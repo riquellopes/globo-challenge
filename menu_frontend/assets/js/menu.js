@@ -86,6 +86,10 @@ Menu = (function(){
             Menu.api.call(this);
         },
         json_to_html:function(response){
+            if( response === null || !("itens" in response) ){
+                throw new Error("A resposta de api de menus, não possui itens.");
+            }
+
             // Processa json recuperado.
             var itens = response.itens;
             var menu = [];

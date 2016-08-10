@@ -11,11 +11,19 @@ module.exports = function(grunt){
         pkg: grunt.file.readJSON("package.json"),
         assets : assets,
         uglify: {
-            "<%=assets.js %>menu.min.js": "<%=assets.js %>menu.js"
+            options: {
+              banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
+                '<%= grunt.template.today("yyyy-mm-dd") %> */\n'
+            },
+            my_target: {
+              files: {
+                '<%=assets.js %>menu.min.js': ['<%=assets.js %>menu.js']
+              }
+            }
         },
 
         jshint: {
-            files: ['Gruntfile.js', 'assets/**/*.js', 'test/**/*.js']
+            files: ['Gruntfile.js', 'assets/js/menu.js', 'test/**/*.js']
         },
 
         jasmine: {
@@ -41,4 +49,5 @@ module.exports = function(grunt){
 
     grunt.registerTask("default", ["jshint", "jasmine"]);
     grunt.registerTask("jsbuilder", ["jshint", "uglify"]);
+    grunt.registerTask("debug", ["jshint", "uglify", "http-server"]);
 };

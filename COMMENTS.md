@@ -39,4 +39,4 @@ que a aplicação pode ter.
 * Eu também pensei em utlizar uma microframework para ajax, mais acabei desenvolvendo uma api para realizar a consulta
 ajax. Em uma nova versão eu iria pesquisaria mais, para encontrar um microframework simples.
 
-* Eu adicionei django-cors
+* Eu adicionei django-cors-headers, a idei é liberar o a requisição da api apenas para domínios globo.

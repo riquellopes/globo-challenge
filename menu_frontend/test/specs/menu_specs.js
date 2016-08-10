@@ -66,7 +66,7 @@ describe("Open and Close Menu", function(){
       });
     });
 
-    it("Open menu when mouseover xtudo menu", function(){
+    it("Open menu when mouseover xtudo menu and close when click outside.", function(){
         // Emulete mouseover.
         var mouse = document.createEvent('MouseEvents');
             mouse.initMouseEvent('mouseover', true, true, window);
@@ -74,6 +74,60 @@ describe("Open and Close Menu", function(){
             expect(document.getElementById("menu-batata").style.display).toBe("none");
             document.getElementById("menu-burguer").dispatchEvent(mouse);
             expect(document.getElementById("menu-batata").style.display).toBe("block");
+    });
+
+});
+
+describe("Open and Close Submenu", function(){
+    beforeEach(function(){
+      var menu = Menu({
+          slug: "globo",
+          target: "menu",
+          request: function(){
+              // Mock requisição ajax.
+              this.json_to_html(json_response);
+          }
+      });
+    });
+
+    it("When mouse is over a submenu it should set block.", function(){
+        var mouse = document.createEvent('MouseEvents');
+            mouse.initMouseEvent('mouseover', true, true, window);
+
+            expect(document.getElementById("sub-menu-3").style.display).toBe("none");
+            document.getElementById("sub-menu-3").dispatchEvent(mouse);
+            expect(document.getElementById("sub-menu-3").style.display).toBe("block");
+    });
+
+});
+
+
+describe("Server does not response ok", function(){
+
+    it("When response of service is null, menu api should raise Error", function(){
+        var menu = Menu({
+            slug: "globo",
+            target: "menu",
+            request: function(){
+                // Mock requisição ajax.
+                var reference_menu = this;
+
+                expect(function(){ reference_menu.json_to_html(null); }).toThrowError("A resposta de api de menus, não possui itens.");
+            }
+        });
+    });
+
+    it("When response of service is {}, menu api should raise Error", function(){
+        var menu = Menu({
+            slug: "globo",
+            target: "menu",
+            request: function(){
+                // Mock requisição ajax.
+                var reference_menu = this;
+
+                expect(function(){ reference_menu.json_to_html({}); }).toThrowError("A resposta de api de menus, não possui itens.");
+            }
+        });
     });
 
 });
