@@ -89,3 +89,6 @@ _SpecRunner.html
 
 # min
 *.min.js
+
+# Django static files
+staticfiles
