@@ -50,7 +50,7 @@ A aplicação frontend é apenas um js, foi criando um index.html com um menu te
 ```
 
 ### Utilização do menu.
-Após adicionar o menu.css e menu.mim.js ao header, inicie e menu no final no html.
+Após adicionar o menu.css e menu.mim.js ao header, inicie o menu no final no html.
 
 #### Atributos.
 - **slug:** Título do menu criado.
