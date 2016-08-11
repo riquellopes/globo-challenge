@@ -5,6 +5,24 @@ PIP=menu_backend/venv/bin/pip
 PY_TEST=menu_backend/venv/bin/py.test
 GUNICORN=menu_backend/venv/bin/gunicorn
 
+help:
+	echo "Comandos make"
+	echo ""
+	echo "clean			 remove todos os arquivos *.pyc"
+	echo "venv			 cria enviroment com python3.5"
+	echo "setup			 cria setup de produção"
+	echo "setup-local	 cria setup local"
+	echo "debug			 executa projeto em modo debug"
+	echo "makemigrations alis para makemigrations do django com o settings.base"
+	echo "migrate		 alis para migrate do django com o settings.base"
+	echo "create-db		 cria banco de dados"
+	echo "test			 executa os testes da apliacação com py.test"
+	echo "test-cov		 executa o teste de coverage"
+	echo "collectstatic	 coleta todos os arquivos estaticos do projeto, e coloca na pasta indicada"
+	echo "load-exemple-menu carrega um exemplo de menu"
+	echo "create-super-user alias para o createsuperuser do django"
+	echo "gunicorn 		 executar projeto com gunicorn"
+
 clean:
 	find . \( -name *.py[co] -o -name __pycache__ \) -delete
 

@@ -29,6 +29,10 @@ que vão ter seu menu gerenciado pelo **MenuBackend**.
 ```bash
     $ make test
 ```
+### Para listar todas as tasks disponíveis
+```bash
+   $ make help
+```
 
 ### Executar MenuFrontend
 A aplicação frontend é apenas um js, foi criando um index.html com um menu test. Para subir a aplicação
