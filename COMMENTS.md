@@ -43,4 +43,6 @@ ajax. Em uma nova versão eu iria pesquisaria mais, para encontrar um microframe
 
 * Eu adicionei django-cors-headers, a idéia é liberar a requisição da api apenas para domínios globo.
 
+#### Como mais tempo.
 * Se eu tive mais tempo eu trabalharia mais o responsivo do site.
+* Um docker-compose cairia muito bem para o ambiente de desenvolvimento.
