@@ -30,7 +30,7 @@ migrate:
 	${PYTHON} menu_backend/manage.py  migrate --settings=menus.settings.base
 
 create-db:
-	mysql -uroot -e "CREATE DATABASE IF NOT EXISTS menus"
+	mysql -uroot -e "CREATE DATABASE IF NOT EXISTS menus" -p
 
 test: clean
 	${PY_TEST} menu_backend/ -s -r a --color=yes
