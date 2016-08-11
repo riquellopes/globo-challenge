@@ -35,6 +35,9 @@ create-db:
 test: clean
 	${PY_TEST} menu_backend/ -s -r a --color=yes
 
+test-cov: clean
+	${PY_TEST} --cov=menu --cov-report=term --cov-report=html -s -r a --color=yes
+
 collectstatic:
 	${PYTHON} menu_backend/manage.py collectstatic --noinput --settings=menus.settings.production
 
