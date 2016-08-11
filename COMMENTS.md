@@ -29,8 +29,10 @@ executar o projeto.
 e o frontend que vai consumir via rest o recurso e tranformar em menu responsivo.
 * Gostaria de fazer um teste de carga no backend com [Locust](http://locust.io), para ter uma noção
 do tempo de resposta da api, e poder ter a real definição do número de request a api suporta.
-* No frontend eu vou usar Grunt para gereciar minhas tarefas, jasmine para executar minhas specs, uglify
-para minificar meus arquivos js e jshint para analizar meus js.
+* No frontend eu vou usar Grunt para gerenciar minhas tarefas, [grunt-contrib-jasmine](https://github.com/gruntjs/grunt-contrib-jasmine) para executar minhas specs, [grunt-contrib-uglify](https://github.com/gruntjs/grunt-contrib-uglify)
+para minificar meus arquivos js e [grunt-contrib-jshint"](https://github.com/gruntjs/grunt-contrib-jshint) para analizar meus js. Eu adicionei o [grunt-http-server](https://www.npmjs.com/package/grunt-http-server), para prover um servidor http para exibir o menu. Adicionei o [jasmine-jquery](https://github.com/velesin/jasmine-jquery) & [jquery](https://www.npmjs.com/package/jquery) apenas por 2 features,
+*loadFixtures* e *jasmine.getFixtures().fixturesPath*, eu não queria perder muito tempo tendo que desenvolver
+isso js puro.
 
 * O javascript do menu foi feito todo com [vanillajs](http://vanilla-js.com), ele não tem nenhuma dependências
 de framework. Essa decisão foi tomada, pesando reutilização em outros projetos e reduzir o numero de dependências
@@ -39,4 +41,6 @@ que a aplicação pode ter.
 * Eu também pensei em utlizar uma microframework para ajax, mais acabei desenvolvendo uma api para realizar a consulta
 ajax. Em uma nova versão eu iria pesquisaria mais, para encontrar um microframework simples.
 
-* Eu adicionei django-cors-headers, a idei é liberar o a requisição da api apenas para domínios globo.
+* Eu adicionei django-cors-headers, a idéia é liberar a requisição da api apenas para domínios globo.
+
+* Se eu tive mais tempo eu trabalharia mais o responsivo do site.
