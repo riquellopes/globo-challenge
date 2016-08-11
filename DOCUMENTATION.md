@@ -71,3 +71,5 @@ Após adicionar o menu.css e menu.mim.js ao header, inicie o menu no final no ht
         host:"http://10.0.0.9:5000"
     });
 ```
+
+*Obs: Alterar o host para o endereço onde sua api esta sendo executada.*
